@@ -4,31 +4,58 @@
 ---
 
 ### AIM  
-To create a Python program that prompts the user for a list of grades separated by commas, splits the string into individual grades, and uses exception handling to inform the user if the values they entered cannot be converted to integers.
+To write a Python program that raises a user-defined exception in a guessing number game, where the user has to guess the number 1
 
 ---
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Read a string `input_str` from the user using `input()`.  
-3. Split the input string using commas (`,`) to create a list of grades.  
-4. Use a `try` block to attempt converting each item in the grades list to an integer and store the result in `l1`.  
-5. If the conversion is successful, print the list `l1` containing the integer values.  
-6. If an error occurs during conversion (for example, if the input is not a valid number), catch the exception and print an error message: `"The grades you entered were in an invalid format."` along with the original grades list.  
-7. Terminate the program.
+1. Define a custom exception class named IncorrectGuessError which will be raised for wrong guesses.
+   
+2.Prompt the user to guess a number.
+
+3.If the user guesses correctly (i.e., the number 1), congratulate the user.
+
+4.If the user guesses incorrectly, raise the IncorrectGuessError and display an error message.
+
+5.End the program.
 
 ---
 
 ### PROGRAM
 
 ```
-Reg.No
-Name
+Reg.No : 212223020023
+Name : Shanthosh S
 Add Your Code Here
+
+def Guess(a):
+    secret=10
+    while True:
+        try:
+            if guess==secret:
+                print("Congratulations! You guessed it correctly.")
+                break
+            elif guess>secret:
+                print("This value is too large, try again!")
+                
+                break
+            else:
+                print("This value is too small, try again!")
+                break
+        except value:
+            print("rg")
+guess=int(input()) 
+Guess(guess)
+            
 
 ```
 
 ### OUTPUT
+![Screenshot 2025-04-28 185853](https://github.com/user-attachments/assets/e7a442ea-7665-4aeb-9250-f3596b80ebaf)
+
 
 ### RESULT
+The program successfully raises a user-defined exception if the user guesses incorrectly and prints an error message.
+
+
